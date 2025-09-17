@@ -34,7 +34,7 @@ console.log("jobs")
         <h3 class="underline text-2xl font-bold">{company}</h3>
           <OpenInNewButton href={website} />
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex flex-wrap items-center gap-2">
         <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap">
             {formatDatetime(startDate)} - {currentJob ? "Present" : formatDatetime(endDate)}
         </Badge>

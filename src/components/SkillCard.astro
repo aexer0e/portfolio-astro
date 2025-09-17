@@ -2,6 +2,7 @@
 // component imports
 import {Icon} from "astro-icon/components";
 import OpenInNewButton from "./ui/OpenInNewButton.astro";
+import { Badge } from "./ui/badge";
 
 interface SkillCardProps {
     icon: string;
@@ -22,16 +23,20 @@ const {
 } = Astro.props as SkillCardProps;
 
 ---
-<div class="flex flex-col gap-2 h-full bg-white dark:bg-n700 p-4 rounded-md">
+<div class="flex flex-col gap-1 h-full bg-white dark:bg-n700 p-4 rounded-md">
     <div class="w-10 h-10">
         <Icon width={40} height={40} name={icon} class="text-primary-light dark:text-primary-dark" />
     </div>
-    <div class="flex items-center mb-1">
-        <h3 class="text-lg font-bold underline text-n700 dark:text-white flex items-center gap-2.5">
-            {name}
-            <OpenInNewButton href={link} />
-        </h3>
-        <span class="ml-auto bg-primary-light dark:bg-primary-dark text-black text-xs font-semibold px-2 py-1 rounded whitespace-nowrap">{years} year{years > 1 ? 's' : ''}</span>
+    <div class="mb-1">
+        <div class="flex items-center">
+            <h3 class="text-lg font-bold underline text-n700 dark:text-white flex items-center gap-2.5">
+                {name}
+                <OpenInNewButton href={link} />
+            </h3>
+        </div>
+        <Badge className="mt-1 bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap text-black text-xs font-semibold px-2 py-1">
+            {years} year{years > 1 ? 's' : ''}
+        </Badge>
     </div>
     {
         showDescription && <p class="text-n700 dark:text-n200">{description}</p>
