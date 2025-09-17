@@ -12,14 +12,14 @@ const hardSkills: HardSkill[] = [
     description: "Strongly typed JavaScript for scalable applications.",
     icon: "mdi:language-typescript",
     link: "https://www.typescriptlang.org/",
-    years: 3
+    years: 6
   },
   {
     name: "JavaScript",
     description: "The language of the web, for both frontend and backend.",
     icon: "mdi:language-javascript",
     link: "https://developer.mozilla.org/docs/Web/JavaScript",
-    years: 6
+    years: 5
   },
   {
     name: "Python",
@@ -33,7 +33,7 @@ const hardSkills: HardSkill[] = [
     description: "Compiled language for fast, reliable backend services.",
     icon: "simple-icons:go",
     link: "https://go.dev/",
-    years: 2
+    years: 4
   },
   {
     name: "PostgreSQL",
@@ -47,14 +47,14 @@ const hardSkills: HardSkill[] = [
     description: "Progressive JavaScript framework for building UIs.",
     icon: "simple-icons:vuedotjs",
     link: "https://vuejs.org/",
-    years: 2
+    years: 4
   },
   {
     name: "React",
     description: "Component-based UI library for building interactive interfaces.",
     icon: "mdi:react",
     link: "https://react.dev/",
-    years: 4
+    years: 2
   },
   {
     name: "Svelte",
