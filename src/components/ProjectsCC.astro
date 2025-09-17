@@ -1,0 +1,145 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import httydAddonImg from '../content/projects/images/gm1/httyd_addon.avif';
+import sonicAddonImg from '../content/projects/images/gm1/sonic_addon.avif';
+import avatarImg from '../content/projects/images/gm1/avatar.avif';
+import httyImg from '../content/projects/images/gm1/httyd.avif';
+import sonicImg from '../content/projects/images/gm1/sonic.avif';
+import atlaImg from '../content/projects/images/gm1/atla.avif';
+import spellruneImg from '../content/projects/images/gm1/spellrune.avif';
+import seasideStoryImg from '../content/projects/images/gm1/seasidestory.avif';
+import flamePrinceImg from '../content/projects/images/cyclone/Flame_Prince_thumbnail_0.jpg';
+import howToBuildImg from '../content/projects/images/cyclone/How_To_Build_thumbnail.jpg';
+import worldOfMagicImg from '../content/projects/images/cyclone/World_of_Magic_2_Thumbnail_0.jpg';
+import incrediblesImg from '../content/projects/images/oreville/theincredibles_Thumbnail_0.jpg';
+import tntArenaImg from '../content/projects/images/oreville/tntarena_Thumbnail_0.jpg';
+import luckyblocksImg from '../content/projects/images/sapphire/OriginalLuckyblocks_Thumbnail_0.jpg';
+
+const projects = [
+  {
+    id: 'httyd_addon',
+    title: 'How to Train Your Dragon Add-On',
+    description: `Take off into the skies, learn each dragon's personality, and bond with them to unlock unique abilities.`,
+    cover: httydAddonImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/how-to-train-your-dragon-add--on/10b469b6-f196-428c-b98e-c572cc55e83e"
+  },
+  {
+    id: 'sonic_addon',
+    title: 'Sonic Add-On',
+    description: 'Transform into Sonic, Knuckles, Tails, Amy and Shadow!',
+    cover: sonicAddonImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/sonic-add--on/f3e0a4be-8858-44d3-9ae8-91643db1b3f6"
+  },
+  {
+    id: 'avatar',
+    title: 'Avatar Rites of Passage',
+    description: `Outfitted as the new groundskeeper, you are ready to restore the estate to it's former beauty.`,
+    cover: avatarImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/avatar:-rites-of-passage/c65cc4c5-8a2f-46f3-bdc6-5bc7c4f7d54f"
+  },
+  {
+    id: 'avatar',
+    title: 'Avatar Legends',
+    description: 'You are the Avatar, the embodiment of light and peace! Master all four elements and learn new skills from Team Avatar and Team Korra.',
+    cover: atlaImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/avatar-legends/adf08b99-bba0-4469-99c2-44e1a8239fb9"
+  },
+  {
+    id: 'spellrune',
+    title: 'Spellrune',
+    description: 'Premiering the brand new Scripting API for Bedrock!',
+    cover: spellruneImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/spellrune/f5cc05fc-616a-4963-a02b-5db3fcc9e311"
+  },
+  {
+    id: 'seasidestory',
+    title: 'Seaside Story',
+    description: 'Live out your own peaceful ocean adventure! Go fishing and discover amazing creatures in brand new ocean biomes.',
+    cover: seasideStoryImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/seaside-story/5c7cd39e-9903-477b-b013-1b6b6d2bd9ab"
+  },
+  {
+    id: 'sonic',
+    title: 'Sonic The Hedgehog',
+    description: 'Sonic the Hedgehog races into Minecraft at supersonic speeds! Sprint, roll, and spring off enemies through iconic zones, with infinite gameplay.',
+    cover: sonicImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/sonic-the-hedgehog/3086206d-62b3-45ff-a0a8-968b8de33082"
+  },
+  {
+    id: 'httyd',
+    title: 'How to Train Your Dragon',
+    description: 'This is Berk, home of Vikings and dragons! Join Toothless, Hiccup, and the rest of the dragons and riders on heroic adventures in Minecraft.',
+    cover: httyImg,
+    link: "https://www.minecraft.net/en-us/marketplace/pdp/gamemode-one/how-to-train-your-dragon/4f7cf58b-e6d7-46ea-9f8c-206d97f2bafe"
+  },
+  {
+    id: 'the_incredibles',
+    title: 'The Incredibles',
+    description: 'Step into the boots of the Incredibles and dive mask first into a Supers playground!',
+    cover: incrediblesImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/oreville-studios/the-incredibles/5e1271b9-484c-4a1d-a9f4-5c919e8a0bbb'
+  },
+  {
+    id: 'tnt_arena',
+    title: 'TNT Arena',
+    description: 'Don\'t you wish Minecraft had more TNT? Well, wish no more! Experience wave after wave of explosive fun!',
+    cover: tntArenaImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/oreville-studios/tnt-arena/17d7ec79-ac00-4e56-b9c8-6acf6e41feed'
+  },
+  {
+    id: 'world_of_magic_2',
+    title: 'World of Magic: Dragon Knight',
+    description: 'Become a student of magic once more and discover the mystical world of the Masra Kingdom!',
+    cover: worldOfMagicImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/cyclone/world-of-magic:-dragon-knight/f31ae578-15b3-42a7-9922-4b1554326777'
+  },
+  {
+    id: 'flame_prince',
+    title: 'World of Magic: Flame Prince',
+    description: 'The hot sands call for a powerful challenger as you sink into the magic of the Flame Prince!',
+    cover: flamePrinceImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/cyclone/world-of-magic:-flame-prince/e755099b-9ade-44f4-a6a1-6f685867dac3'
+  },
+  {
+    id: 'how_to_build',
+    title: 'How To Build: Town',
+    description: 'Utilize 20 different build sets to create your very own custom city or town!',
+    cover: howToBuildImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/cyclone/how-to-build:-town/2384db70-d40a-48f9-ab92-925e440e4c2d'
+  },
+  {
+    id: 'original_luckyblocks',
+    title: 'Original Luckyblocks',
+    description: 'Luckyblock! Play the Original adaptation of the popular mod luckyblocks!',
+    cover: luckyblocksImg,
+    link: 'https://www.minecraft.net/en-us/marketplace/pdp/sapphire-studios/original-lucky-blocks/27d002be-2a56-48d9-9f69-4a8e85165353'
+  },
+];
+---
+
+<!--Grid section to show the projects in to columns -->
+<>
+    <section class="mt-10 px-4 w-full">
+        <div class="mb-4">
+            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {
+                projects.map((project) => (
+                        <div class="aspect-w-16 aspect-h-9 w-full">
+                            <ProjectCard
+                                id={project.id}
+                                title={project.title}
+                                description={project.description}
+                                cover={project.cover}
+                                link={project.link}
+                            />
+                        </div>
+                ))
+            }
+        </div>
+    </section>
+</>
+
+
+

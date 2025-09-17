@@ -1,0 +1,26 @@
+# Unused files to remove (based on index.astro tree)
+
+## Components
+src/components/BackBtn.astro
+src/components/BackToTop.astro
+src/components/EduDetail.astro
+src/components/Footer.astro
+src/components/Navbar.astro
+src/components/PostCard.astro
+src/components/ProfileActionButton.astro
+src/components/ProjectCardList.astro
+
+## Data
+src/data/education.ts
+src/data/languages.ts
+src/data/menu.ts
+src/data/softSkills.ts
+
+## Lib
+src/lib/formatDatetime.js
+
+## Icons/UI (if not referenced elsewhere)
+src/components/icons/
+src/components/ui/
+
+# Review before deleting if you use these in other places or dynamically.
