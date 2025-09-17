@@ -6,7 +6,6 @@ import OpenInNewButton from "./ui/OpenInNewButton.astro";
 
 const { title, cover, id, description, link, company, role } = Astro.props;
 const aspectRatio = cover && cover.width && cover.height ? `${cover.width} / ${cover.height}` : undefined;
-console.log("project card")
 ---
 <div class="relative flex flex-col text-gray-700 bg-clip-border rounded-xl w-full transition">
     <div class="relative overflow-hidden rounded-xl w-full flex items-center justify-center" style={aspectRatio ? { aspectRatio } : {}}>

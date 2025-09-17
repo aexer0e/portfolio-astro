@@ -29,7 +29,7 @@ export const ME = {
         email: "ibehawar@gmail.com",
         linkedin: "https://www.linkedin.com/in/ibrahim-shaban/"
     },
-    aboutMe: "I'm a software engineer and game developer specializing in interactive experiences, Minecraft content, and custom tools. My work blends creativity with technical expertise, from building unique game mechanics to delivering polished, scalable solutions for games and creators. I thrive on solving complex problems, collaborating with teams, and pushing the boundaries of what's possible in both games and software.",
+    aboutMe: "I'm a software engineer and game developer who loves making games, Minecraft content, and tools that people get value from. I enjoy figuring out tricky problems, experimenting with new ideas, and creating stuff that's both fun and useful.",
 }
 
 export const SOCIALS = [
