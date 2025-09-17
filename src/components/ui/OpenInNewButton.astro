@@ -1,0 +1,11 @@
+---
+import { Button } from "./button";
+import { Icon } from "astro-icon/components";
+
+const { href } = Astro.props;
+---
+<a href={href} target="_blank" rel="noopener noreferrer" aria-label="Open website">
+  <Button variant="default" size="icon" className="flex items-center justify-center p-0 w-8 h-8">
+    <Icon name="mdi:open-in-new" is:inline />
+  </Button>
+</a>

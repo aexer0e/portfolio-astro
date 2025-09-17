@@ -1,11 +1,14 @@
 ---
 // component imports
 import {Icon} from "astro-icon/components";
+import OpenInNewButton from "./ui/OpenInNewButton.astro";
 
 interface SkillCardProps {
     icon: string;
     name: string;
     description: string;
+    link: string;
+    years: number;
     showDescription?: boolean;
 }
 
@@ -13,16 +16,23 @@ const {
     icon,
     name,
     description,
+    link,
+    years,
     showDescription = true,
 } = Astro.props as SkillCardProps;
 
 ---
-
-<div class="flex flex-col gap-2 h-skill-icon bg-white dark:bg-n700 p-4 rounded-md">
+<div class="flex flex-col gap-2 h-full bg-white dark:bg-n700 p-4 rounded-md">
     <div class="w-10 h-10">
         <Icon width={40} height={40} name={icon} class="text-primary-light dark:text-primary-dark" />
     </div>
-    <h3 class="text-lg font-bold">{name}</h3>
+    <div class="flex items-center mb-1">
+        <h3 class="text-lg font-bold underline text-n700 dark:text-white flex items-center gap-2.5">
+            {name}
+            <OpenInNewButton href={link} />
+        </h3>
+        <span class="ml-auto bg-primary-light dark:bg-primary-dark text-black text-xs font-semibold px-2 py-1 rounded whitespace-nowrap">{years} year{years > 1 ? 's' : ''}</span>
+    </div>
     {
         showDescription && <p class="text-n700 dark:text-n200">{description}</p>
     }

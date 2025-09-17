@@ -1,9 +1,12 @@
+@import './jetbrains-mono.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
     :root {
-        --radius: 0.5rem
+        --radius: 0.5rem;
+        font-size: 18px;
+        font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
     }
 }
 

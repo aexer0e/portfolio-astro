@@ -1,30 +1,42 @@
 ---
 // astro imports
 import {Image} from "astro:assets";
+import { Badge } from "./ui/badge";
+import OpenInNewButton from "./ui/OpenInNewButton.astro";
 
-const { title, cover, id, description, link } = Astro.props;
+const { title, cover, id, description, link, company, role } = Astro.props;
 const aspectRatio = cover && cover.width && cover.height ? `${cover.width} / ${cover.height}` : undefined;
+console.log("project card")
 ---
-<a href={link}>
-    <div class="relative flex flex-col text-gray-700 bg-clip-border rounded-xl w-full">
-        <div class="relative overflow-hidden rounded-xl w-full flex items-center justify-center" style={aspectRatio ? { aspectRatio } : {}}>
-            <Image
-                    transition:name={ `${id}-image` }
-                    src={cover}
-                    alt={"cover preview of " + title}
-                    class={"object-contain w-full h-full rounded-xl"}
-                    loading={'eager'}
-            />
-        </div>
-        <div class="px-2 py-4 flex flex-col gap-2">
-            <div class="flex items-center justify-between mb-2">
-                <h4 class="font-semibold text-xl text-n500 dark:text-white ">
+<div class="relative flex flex-col text-gray-700 bg-clip-border rounded-xl w-full transition">
+    <div class="relative overflow-hidden rounded-xl w-full flex items-center justify-center" style={aspectRatio ? { aspectRatio } : {}}>
+        <Image
+                transition:name={ `${id}-image` }
+                src={cover}
+                alt={"cover preview of " + title}
+                class={"object-contain w-full h-full rounded-xl"}
+                loading={'eager'}
+        />
+    </div>
+    <div class="px-2 py-4 flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 mb-2">
+                <h4 class="font-semibold underline text-2xl text-n500 dark:text-white flex items-center gap-2.5">
                     {title}
+                    <OpenInNewButton href={link} />
                 </h4>
             </div>
-            <p class="text-sm text-n500 dark:text-light-theme ">
-                {description}
-            </p>
+            <div class="flex flex-row gap-2">
+                <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap">
+                    {company}
+                </Badge>
+                <Badge className="bg-primary-light dark:bg-primary-dark w-fit rounded-md whitespace-nowrap">
+                    {role}
+                </Badge>
+            </div>
         </div>
+        <p class="text-base md:text-lg text-n500 dark:text-light-theme ">
+            {description}
+        </p>
     </div>
-</a>
+</div>

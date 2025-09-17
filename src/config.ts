@@ -1,5 +1,5 @@
 export const SITE = {
-    title: "Eeb | Portfolio",
+    title: "Ibrahim | Portfolio",
     description: "A simple portfolio created with Astro",
     tags: ["portfolio", "Resume cv"],
     lang: "en",
@@ -8,7 +8,7 @@ export const SITE = {
 }
 
 export const ME = {
-    name: "Eeb",
+    name: "Ibrahim",
     profession: "Software Engineer | Game Developer",
     profileImage: "pp2.png",
     profileFacts: [
@@ -29,7 +29,7 @@ export const ME = {
         email: "ibehawar@gmail.com",
         linkedin: "https://www.linkedin.com/in/ibrahim-shaban/"
     },
-    aboutMe: "I am a software engineer with a passion for web development. I have experience in building web " + "applications using modern technologies. I am a self-taught developer who enjoys learning new things and " + "sharing knowledge with others.",
+    aboutMe: "I'm a software engineer and game developer specializing in interactive experiences, Minecraft content, and custom tools. My work blends creativity with technical expertise, from building unique game mechanics to delivering polished, scalable solutions for games and creators. I thrive on solving complex problems, collaborating with teams, and pushing the boundaries of what's possible in both games and software.",
 }
 
 export const SOCIALS = [
